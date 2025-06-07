@@ -1,15 +1,15 @@
-# Reto Técnico
+# Reto Técnico - Julio Alemán
 Este proyecto es una aplicación React que puede ser desplegada fácilmente utilizando Docker.\
-A continuación, se detallan los pasos necesarios para construir y ejecutar la aplicación en un contenedor Docker.
+A continuación, se muestra información que se tomo en cuenta para el desarrollo del reto técnico y mas abajo se detallan los pasos necesarios para construir y ejecutar la aplicación en un contenedor Docker.
 
 ## Decisiones de Arquitectura y Tecnologías Elegidas
 El proyecto fue desarrollado utilizando React como biblioteca principal para la construcción de la interfaz de usuario, esto porque es muy sencillo su implementación y manejo de componentes. Tiene una amplia gama de posibilidades para generar varias interfaces interactivas al hacer uso de estados, hooks, props, etc.
 
-Para el despliegue, se optó por Docker con el objetivo de asegurar un entorno de ejecución consistente, facilitar el empaquetado de la aplicación como una imagen autocontenida, y simplificar tanto el desarrollo local como el despliegue en producción.
+Para el despliegue, se utilizó Docker con el objetivo de asegurar un entorno de ejecución consistente, facilitar el empaquetado de la aplicación como una imagen autocontenida, y simplificar tanto el desarrollo local como el despliegue en producción.
 
 El servidor web elegido fue Nginx, utilizado para servir los archivos estáticos de la aplicación React en un contenedor ligero y de alto rendimiento. Además, se configuró para manejar rutas correctamente mediante try_files, garantizando una navegación fluida en aplicaciones Single Page Application.
 
-En cuanto a la visualización de datos, se utilizó la librería Chart.js junto con su integración en React (react-chartjs-2), lo que permite incorporar gráficos dinámicos y responsivos de manera sencilla y eficiente.
+En cuanto a la visualización de datos, se utilizó la librería [Chart.js](https://www.chartjs.org/) junto con su integración en React (react-chartjs-2), lo que permite incorporar gráficos dinámicos y responsivos de manera sencilla y eficiente.
 
 Estas decisiones se tomaron priorizando:
 
