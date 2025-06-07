@@ -1,0 +1,212 @@
+[
+  {
+    "fecha": "2025-05",
+    "categoria": "Ventas",
+    "valor": 4464
+  },
+  {
+    "fecha": "2025-04",
+    "categoria": "Ventas",
+    "valor": 4895
+  },
+  {
+    "fecha": "2025-03",
+    "categoria": "Ventas",
+    "valor": 1410
+  },
+  {
+    "fecha": "2025-01",
+    "categoria": "Ventas",
+    "valor": 4615
+  },
+  {
+    "fecha": "2025-01",
+    "categoria": "Ventas",
+    "valor": 4469
+  },
+  {
+    "fecha": "2024-12",
+    "categoria": "Ventas",
+    "valor": 4804
+  },
+  {
+    "fecha": "2024-11",
+    "categoria": "Ventas",
+    "valor": 2622
+  },
+  {
+    "fecha": "2024-10",
+    "categoria": "Ventas",
+    "valor": 4097
+  },
+  {
+    "fecha": "2024-09",
+    "categoria": "Ventas",
+    "valor": 3274
+  },
+  {
+    "fecha": "2024-08",
+    "categoria": "Ventas",
+    "valor": 1558
+  },
+  {
+    "fecha": "2024-07",
+    "categoria": "Ventas",
+    "valor": 2198
+  },
+  {
+    "fecha": "2024-06",
+    "categoria": "Ventas",
+    "valor": 3895
+  },
+  {
+    "producto": "Producto A",
+    "categoria": "Inventario",
+    "valor": 104
+  },
+  {
+    "producto": "Producto B",
+    "categoria": "Inventario",
+    "valor": 25
+  },
+  {
+    "producto": "Producto C",
+    "categoria": "Inventario",
+    "valor": 175
+  },
+  {
+    "producto": "Producto D",
+    "categoria": "Inventario",
+    "valor": 55
+  },
+  {
+    "producto": "Producto E",
+    "categoria": "Inventario",
+    "valor": 80
+  },
+  {
+    "nombre": "Jugador 1",
+    "atributo": "Fuerza",
+    "valor": 95
+  },
+  {
+    "nombre": "Jugador 1",
+    "atributo": "Agilidad",
+    "valor": 69
+  },
+  {
+    "nombre": "Jugador 1",
+    "atributo": "Resistencia",
+    "valor": 40
+  },
+  {
+    "nombre": "Jugador 1",
+    "atributo": "Precisión",
+    "valor": 79
+  },
+  {
+    "nombre": "Jugador 1",
+    "atributo": "Velocidad",
+    "valor": 74
+  },
+  {
+    "nombre": "Jugador 2",
+    "atributo": "Fuerza",
+    "valor": 84
+  },
+  {
+    "nombre": "Jugador 2",
+    "atributo": "Agilidad",
+    "valor": 79
+  },
+  {
+    "nombre": "Jugador 2",
+    "atributo": "Resistencia",
+    "valor": 42
+  },
+  {
+    "nombre": "Jugador 2",
+    "atributo": "Precisión",
+    "valor": 92
+  },
+  {
+    "nombre": "Jugador 2",
+    "atributo": "Velocidad",
+    "valor": 71
+  },
+  {
+    "nombre": "Jugador 3",
+    "atributo": "Fuerza",
+    "valor": 48
+  },
+  {
+    "nombre": "Jugador 3",
+    "atributo": "Agilidad",
+    "valor": 90
+  },
+  {
+    "nombre": "Jugador 3",
+    "atributo": "Resistencia",
+    "valor": 59
+  },
+  {
+    "nombre": "Jugador 3",
+    "atributo": "Precisión",
+    "valor": 81
+  },
+  {
+    "nombre": "Jugador 3",
+    "atributo": "Velocidad",
+    "valor": 58
+  },
+  {
+    "color": "Rojo",
+    "grupo": "Preferencias",
+    "valor": 62
+  },
+  {
+    "color": "Azul",
+    "grupo": "Preferencias",
+    "valor": 94
+  },
+  {
+    "color": "Verde",
+    "grupo": "Preferencias",
+    "valor": 37
+  },
+  {
+    "color": "Amarillo",
+    "grupo": "Preferencias",
+    "valor": 70
+  },
+  {
+    "color": "Morado",
+    "grupo": "Preferencias",
+    "valor": 14
+  },
+  {
+    "region": "Norte",
+    "categoria": "Clientes",
+    "valor": 996
+  },
+  {
+    "region": "Sur",
+    "categoria": "Clientes",
+    "valor": 429
+  },
+  {
+    "region": "Este",
+    "categoria": "Clientes",
+    "valor": 160
+  },
+  {
+    "region": "Oeste",
+    "categoria": "Clientes",
+    "valor": 532
+  },
+  {
+    "region": "Centro",
+    "categoria": "Clientes",
+    "valor": 942
+  }
+]
