@@ -1,4 +1,4 @@
-# Reto Técnico – Despliegue con Docker
+# Reto Técnico
 Este proyecto es una aplicación React que puede ser desplegada fácilmente utilizando Docker.\
 A continuación, se detallan los pasos necesarios para construir y ejecutar la aplicación en un contenedor Docker.
 
@@ -18,11 +18,10 @@ Compatibilidad con entornos multiplataforma\
 Facilidad para escalar y desplegar en diferentes ambientes\
 Buena experiencia de usuario con una interfaz clara y visualmente informativa
 
+# Despliegue con Docker
 
 ## Requisitos Previos
 Se debe de tener instalado Docker. En caso de querer correr localmente la aplicación se requiere instalar Node.js en la computaora.
-
-# Despliegue con Docker
 
 ### Navegar al Directorio del Proyecto
 Abre una terminal y navega al directorio de la aplicación React:
