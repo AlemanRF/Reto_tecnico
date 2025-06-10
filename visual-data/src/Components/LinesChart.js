@@ -1,5 +1,4 @@
 import { Line } from 'react-chartjs-2';
-import data from './charts.json';
 import { useState } from 'react';
 
 import {
@@ -25,24 +24,13 @@ ChartJS.register(
     Filler
 );
 
-const ventas = data.filter(item => item.categoria === "Ventas");
-
-const ventasPorFecha = {};
-
-ventas.forEach(({ fecha, valor }) => {
-  if (!ventasPorFecha[fecha]) {
-    ventasPorFecha[fecha] = 0;
-  }
-  ventasPorFecha[fecha] += valor;
-});
-
-export default function LinesChart() {
+export default function LinesChart({datos}) {
     const [desde, setDesde] = useState("2024-06");
     const [hasta, setHasta] = useState("2025-06");
 
-    const mesesDisponibles = ventas.map(v => v.fecha).sort();
+    const mesesDisponibles = datos.map(v => v.fecha).sort();
 
-    const ventasFiltradas = ventas
+    const ventasFiltradas = datos
         .filter(v => v.fecha >= desde && v.fecha <= hasta)
         .sort((a, b) => a.fecha.localeCompare(b.fecha));
 

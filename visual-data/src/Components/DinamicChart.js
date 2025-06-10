@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Bar } from 'react-chartjs-2';
-import data from './charts.json';
 
 import {
   Chart as ChartJS,
@@ -21,52 +20,47 @@ ChartJS.register(
     Legend
 );
 
-const ventas = data.filter(item => item.categoria === "Ventas");
-const inventario = data.filter(item => item.categoria === "Inventario");
-const preferencias = data.filter(item => item.grupo === "Preferencias");
-const clientes = data.filter(item => item.categoria === "Clientes");
-
-const ventasProc = ventas.map(item => ({
-  label: item.fecha,
-  value: item.valor
-}));
-
-const inventarioProc = inventario.map(item => ({
-    label: item.producto,
-    value: item.valor
-}));
-
-const clientesProc = clientes.map(item => ({
-    label: item.region,
-    value: item.valor
-}));
-
-const preferenciasProc = preferencias.map(item => ({
-    label: item.color,
-    value: item.valor
-}));
-
-const datasetsMap = {
-  Ventas: {
-    label: "Ventas",
-    data: ventasProc
-  },
-  Inventario: {
-    label: "Inventario",
-    data: inventarioProc
-  },
-  Clientes: {
-    label: "Clientes",
-    data: clientesProc
-  },
-  Preferencias: {
-    label: "Preferencias",
-    data: preferenciasProc
-  }
-};
-
-export default function DatasetSelectorChart() {
+export default function DatasetSelectorChart({datos}) {
   const [seleccion, setSeleccion] = useState("Ventas");
+  console.log(datos);
+  const ventasProc = datos[0].map(item => ({
+    label: item.fecha,
+    value: item.valor
+  }));
+
+  const inventarioProc = datos[1].map(item => ({
+      label: item.producto,
+      value: item.valor
+  }));
+
+  const clientesProc = datos[3].map(item => ({
+      label: item.region,
+      value: item.valor
+  }));
+
+  const preferenciasProc = datos[2].map(item => ({
+      label: item.color,
+      value: item.valor
+  }));
+
+  const datasetsMap = {
+    Ventas: {
+      label: "Ventas",
+      data: ventasProc
+    },
+    Inventario: {
+      label: "Inventario",
+      data: inventarioProc
+    },
+    Clientes: {
+      label: "Clientes",
+      data: clientesProc
+    },
+    Preferencias: {
+      label: "Preferencias",
+      data: preferenciasProc
+    }
+  };
 
   const datosSeleccionados = datasetsMap[seleccion];
 

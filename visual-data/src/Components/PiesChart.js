@@ -5,7 +5,6 @@ import {
     Legend 
 } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
-import data from './charts.json';
 import { useState } from 'react';
 
 ChartJS.register(
@@ -13,15 +12,6 @@ ChartJS.register(
     Tooltip, 
     Legend
 );
-
-const inventario = data.filter(item => item.categoria === "Inventario");
-const producto = [];
-const piezas = [];
-
-for (var i in inventario) {
-    producto.push(inventario[i].producto);
-    piezas.push(inventario[i].valor);
-}
 
 const colorMap = {
   "Producto A": "rgba(255, 99, 132, 0.6)",
@@ -31,10 +21,18 @@ const colorMap = {
   "Producto E": "rgba(153, 102, 255, 0.6)"
 };
 
-export default function Pies() {
+export default function Pies({datos}) {
     const [minStock, setMinStock] = useState(0);
 
-    const productosFiltrados = inventario.filter(p => p.valor >= minStock);
+    const producto = [];
+    const piezas = [];
+
+    for (var i in datos) {
+        producto.push(datos[i].producto);
+        piezas.push(datos[i].valor);
+    }
+
+    const productosFiltrados = datos.filter(p => p.valor >= minStock);
 
     const midata = {
         labels: productosFiltrados.map(p => p.producto),

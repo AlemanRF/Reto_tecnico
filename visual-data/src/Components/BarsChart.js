@@ -1,5 +1,4 @@
 import { Bar } from 'react-chartjs-2';
-import data from './charts.json';
 import { useState } from 'react';
 
 import {
@@ -25,14 +24,11 @@ ChartJS.register(
     Filler
 );
 
-const clientes = data.filter(item => item.categoria === "Clientes");
-
-const regiones = clientes.map(c => c.region);
-const values = clientes.map(c => c.valor);
-
-
-export default function Bars() {
+export default function Bars({datos}) {
     const [color, setColor] = useState("rgba(0, 220, 195, 0.5)");
+
+    const regiones = datos.map(c => c.region);
+    const values = datos.map(c => c.valor);
 
     const midata = {
         labels: regiones,

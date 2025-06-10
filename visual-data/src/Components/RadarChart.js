@@ -1,5 +1,4 @@
 import { Radar } from 'react-chartjs-2';
-import data from './charts.json';
 import { useState } from 'react';
 
 import {
@@ -23,29 +22,27 @@ ChartJS.register(
     Filler
 );
 
-const jugadores = data.filter(item => item.nombre);
-
-const etiquetas = [...new Set(jugadores.map(j => j.atributo))];
-
-const jugadoresMap = {};
-jugadores.forEach(({ nombre, atributo, valor }) => {
-  if (!jugadoresMap[nombre]) {
-    jugadoresMap[nombre] = {};
-  }
-  jugadoresMap[nombre][atributo] = valor;
-});
-
-const datasets = Object.entries(jugadoresMap).map(([nombre, atributos], index) => ({
-  label: nombre,
-  data: etiquetas.map(etiqueta => atributos[etiqueta] || 0), // ordena según las etiquetas
-  fill: true,
-  backgroundColor: `rgba(${50 + index * 50}, 99, 132, 0.2)`,
-  borderColor: `rgba(${50 + index * 50}, 99, 132, 1)`,
-  pointBackgroundColor: `rgba(${50 + index * 50}, 99, 132, 1)`
-}));
-
-export default function RadarChart() {
+export default function RadarChart({datos}) {
     const [maxR, setMaxR] = useState(100);
+
+    const etiquetas = [...new Set(datos.map(j => j.atributo))];
+
+    const jugadoresMap = {};
+    datos.forEach(({ nombre, atributo, valor }) => {
+      if (!jugadoresMap[nombre]) {
+        jugadoresMap[nombre] = {};
+      }
+      jugadoresMap[nombre][atributo] = valor;
+    });
+
+    const datasets = Object.entries(jugadoresMap).map(([nombre, atributos], index) => ({
+      label: nombre,
+      data: etiquetas.map(etiqueta => atributos[etiqueta] || 0), // ordena según las etiquetas
+      fill: true,
+      backgroundColor: `rgba(${50 + index * 50}, 99, 132, 0.2)`,
+      borderColor: `rgba(${50 + index * 50}, 99, 132, 1)`,
+      pointBackgroundColor: `rgba(${50 + index * 50}, 99, 132, 1)`
+    }));
 
     const midata = {
       labels: etiquetas,
