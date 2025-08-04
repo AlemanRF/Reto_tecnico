@@ -1,4 +1,4 @@
-# Reto Técnico - Julio Alemán
+# Visualización de gráficos interactivos - Julio Alemán
 Este proyecto es una aplicación React que puede ser desplegada fácilmente utilizando Docker.\
 A continuación, se muestra información que se tomo en cuenta para el desarrollo del reto técnico y mas abajo se detallan los pasos necesarios para construir y ejecutar la aplicación en un contenedor Docker.
 
